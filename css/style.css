@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+#titlebar {
+    width: 100%;
+    height: 20px;
+    -webkit-app-region: drag;
+}
+#titlebar a {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    border-radius: 8px;
+    border: 1px black solid;
+    margin: 2px 0px 1px 7px;
+    position: relative;
+    float: left;
+    -webkit-app-region: no-drag
+}
+#titlebar a:hover {
+    border: none;
+}
+#close:hover {
+    background-color: red;
+}
+#fullscreen:hover {
+    background-color: green;
+}
+#minimize:hover {
+    background-color: blue;
+}
+#window-title {
+    text-align: center;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    font-family: "YaHei Consolas Hybrid", Consolas, "Malgun Gothic", "Segoe UI", "Trebuchet MS", Helvetica, monospace, monospace;
+    font-size: small;
+    margin-left: -70px;
+}

@@ -4,7 +4,7 @@
 var currentWindow = chrome.app.window.current();
 currentWindow.onBoundsChanged.addListener(function () {
     try {
-        xmarkEditor.resize(currentWindow.getBounds().width, currentWindow.getBounds().height);
+        xmarkEditor.resize(currentWindow.getBounds().width, currentWindow.getBounds().height - 21);
     } catch (ex) {
         throw ex;
     }

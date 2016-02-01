@@ -5,50 +5,7 @@
         <title>Themes - Editor.md examples</title>
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="../css/editormd.css" />
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                border: 0;
-            }
-            #titlebar {
-                width: 100%;
-                height: 20px;
-                -webkit-app-region: drag;
-            }
-            #titlebar a {
-                width: 16px;
-                height: 16px;
-                display: inline-block;
-                border-radius: 8px;
-                border: 1px black solid;
-                margin: 2px 0px 1px 7px;
-                position: relative;
-                float: left;
-                -webkit-app-region: no-drag
-            }
-            #titlebar a:hover {
-                border: none;
-            }
-            #close:hover {
-                background-color: red;
-            }
-            #fullscreen:hover {
-                background-color: green;
-            }
-            #minimize:hover {
-                background-color: blue;
-            }
-            #window-title {
-                text-align: center;
-                display: inline-block;
-                height: 20px;
-                line-height: 20px;
-                font-family: "YaHei Consolas Hybrid", Consolas, "Malgun Gothic", "Segoe UI", "Trebuchet MS", Helvetica, monospace, monospace;
-                font-size: small;
-                margin-left: -70px;
-            }
-        </style>
+        <link rel="stylesheet" href="../../css/style.css" />
     </head>
     <body>
         <div id="titlebar">
@@ -59,88 +16,43 @@
         </div>
         <div id="layout">
             <div id="xmark">
-                <textarea style="display:none;">[TOC]
-
-### Themes
-
-#### Setting
-
-configs:
-
+                <textarea style="display:none;"># It is Xmark
 ```javascript
 {
-    // Editor.md theme, default or dark, change at v1.5.0
-    // You can also custom css class .editormd-theme-xxxx
-    theme : "default | dark",
-
-    // Preview container theme, added v1.5.0
-    // You can also custom css class .editormd-preview-theme-xxxx
-    previewTheme : "default | dark",
-
-    // Added @v1.5.0 & after version this is CodeMirror (editor area) theme
-    editorTheme : editormd.editorThemes['theme-name']
+	name: 'Xmark',
+	version: 'alpha0.4.1',
+	description: 'a cool markdown editor'
 }
 ```
+#### Support features
+- Support Standard Markdown / CommonMark and GFM (GitHub Flavored Markdown).
+- code highlight.
+- Real-time preview.
 
-functions:
+#### Next support features
+- Save and manage files from local.
+- Login and upload file to server.
+- Add a toolbar.
+- ...
 
-```javascript
-editor.setTheme('theme-name');
-editor.setEditorTheme('theme-name');
-editor.setPreviewTheme('theme-name');
-```
+#### Dependents
+- editor.md
+- CodeMirror
+- marked
+- jQuery
+- FontAwesome
+- github-markdown.css
+- KaTeX
+- prettify.js
+- Rephael.js
+- flowchart.js
+- sequence-diagram.js
+- Prefixes.scss
 
-#### Default theme
+#### GitHub repository
+https://github.com/ChromeExt/xmark.git
+welcome to star and fork!
 
-- Editor.md theme : `default`
-- Preview area theme : `default`
-- Editor area theme : `default`
-
-> Recommend `dark` theme.
-
-#### Recommend editor area themes
-
-- ambiance
-- eclipse
-- mdn-like
-- mbo
-- monokai
-- neat
-- pastel-on-dark
-
-#### Editor area themes
-
-- default
-- 3024-day
-- 3024-night
-- ambiance
-- ambiance-mobile
-- base16-dark
-- base16-light
-- blackboard
-- cobalt
-- eclipse
-- elegant
-- erlang-dark
-- lesser-dark
-- mbo
-- mdn-like
-- midnight
-- monokai
-- neat
-- neo
-- night
-- paraiso-dark
-- paraiso-light
-- pastel-on-dark
-- rubyblue
-- solarized
-- the-matrix
-- tomorrow-night-eighties
-- twilight
-- vibrant-ink
-- xq-dark
-- xq-light
 </textarea>
             </div>
         </div>
