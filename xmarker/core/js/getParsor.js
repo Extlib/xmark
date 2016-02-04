@@ -2,8 +2,7 @@
  * Created by Jia van on 2016/1/31.
  */
 var xmarkEditor,
-    dataSet = {},
-    INIT_CONTENT;
+    dataSet = {};
 
 $(function() {
     xmarkEditor = editormd("xmark", {
