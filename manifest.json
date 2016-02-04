@@ -13,6 +13,6 @@
   "icons": {
     "128": "icon-128.png"
   },
-  "permissions": ["webview"],
+  "permissions": ["webview", "storage"],
   "minimum_chrome_version": "28"
 }

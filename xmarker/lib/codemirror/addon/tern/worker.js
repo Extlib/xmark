@@ -39,6 +39,5 @@ function startServer(defs, plugins, scripts) {
   });
 }
 
-var console = {
   log: function(v) { postMessage({type: "debug", message: v}); }
 };
