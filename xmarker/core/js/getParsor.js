@@ -2,8 +2,8 @@
  * Created by Jia van on 2016/1/31.
  */
 var xmarkEditor,
-    setObj = {},
-    getObj = {};
+    dataSet = {},
+    INIT_CONTENT;
 
 $(function() {
     xmarkEditor = editormd("xmark", {
@@ -20,27 +20,28 @@ $(function() {
                 'Ctrl-S': function() {
                     //console.log(xmarkEditor.getMarkdown());
                     //save to local storage
-                    setObj = {
+                    dataSet = {
                         markdown: xmarkEditor.getMarkdown()
                     };
-                    chrome.storage.local.set(setObj, function() {
+                    chrome.storage.local.set(dataSet, function() {
                         //callback function
-                        console.log('save data success');
-                        console.log(setObj.markdown);
+                        //console.log('save data success');
                     });
                 }
             };
-            this.addKeyMap(keyMap);//add keymap whenever app is on load
 
             /**
-             * get saved data whenever app is on load
+             * load data when loading app and set editor textarea
+             * @param keyName Object Key, which saved in storage
+             * @param function options callbcak function
              */
-            chrome.storage.local.get(getObj, function(dataObj) {
-                if(getObj.markdown != "") {
-                    xmarkEditor.setMarkdown(getObj.markdown);
-                    console.log(getObj.markdown);
+            chrome.storage.local.get('markdown', function(data) {
+                if(data.markdown != null) {
+                    xmarkEditor.setMarkdown(data.markdown);
                 }
             });
+
+            this.addKeyMap(keyMap);//add keymap when loading app
         },
         resize: function() {
             xmarkEditor.resize(currentWindow.getBounds().width, currentWindow.getBounds().height - 21);
@@ -49,6 +50,5 @@ $(function() {
             return ["undo", "redo", "|", "bold", "hr", "|", "preview", "watch", "|", "fullscreen", "info", "testIcon", "testIcon2", "file", "faicon", "||", "watch", "fullscreen", "preview", "testIcon"]
         }*/
     });
-    xmarkEditor.hideToolbar();
+    xmarkEditor.hideToolbar();//hidden toolbar when init editor
 });
-
