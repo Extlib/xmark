@@ -3,7 +3,7 @@ This is a markdown editor under the Chrome platform.
 ```javascript
 {
 	name: 'Xmark',
-	version: 'alpha0.4.2',
+	version: '0.4.2',
 	description: 'a cool markdown editor'
 }
 ```
@@ -40,6 +40,6 @@ welcome to star and fork!
 
 # Updates
 - 0.4.2(alpha) 
-  - 增加文档保存/恢复功能，新增快捷键`Ctrl + S`可快捷保存当前编辑的文档。存储区域为`chrome.storage`（未加密的存储块）。保存后的文档下次启动App时将会自动加载之前的内容。
+  - add `ctrl+s` -> save data
   - Fixd bugs。
 
