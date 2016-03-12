@@ -41,5 +41,5 @@ welcome to star and fork!
 # Updates
 - 0.4.2(alpha) 
   - add `ctrl+s` -> save data
-  - Fixd bugs。
+  - Fixd bugs
 
